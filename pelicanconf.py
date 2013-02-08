@@ -5,7 +5,7 @@ AUTHOR = u'Casey Marshall'
 SITENAME = u'cmars blog'
 SITEURL = ''
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'US/Central'
 
 DEFAULT_LANG = u'en'
 
@@ -21,4 +21,5 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
-THEME="basic"
+THEME="tuxlite_tbs"
+#THEME="bootstrap2"
