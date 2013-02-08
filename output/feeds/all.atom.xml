@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>cmars blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2013-02-07T00:00:00+01:00</updated><entry><title>first post</title><link href="/first-post.html" rel="alternate"></link><updated>2013-02-07T00:00:00+01:00</updated><author><name>Casey Marshall</name></author><id>tag:,2013-02-07:first-post.html</id><summary type="html">&lt;p&gt;this is a first post made with pelican.&lt;/p&gt;
+</summary></entry></feed>
