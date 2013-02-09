@@ -27,5 +27,5 @@ of this collection. As a PGP keyserver, &lt;a class="reference external" href="h
 &lt;li&gt;Is written in a language I'd feel comfortable hacking on (Golang or Python).&lt;/li&gt;
 &lt;li&gt;Mostly just works and doesn't get in the way.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I settled on &lt;a class="reference external" href="http://getpelican.com"&gt;Pelican&lt;/a&gt;. So far, I'm liking it quite a bit. I had to tweak the Makefile a bit to get the &lt;tt class="docutils literal"&gt;make github&lt;/tt&gt; target to work for a personal Github page, but it works. &lt;a class="reference external" href="https://github.com/cmars/cmars.github.com"&gt;This blog's project page&lt;/a&gt; might be helpful if you're trying to get this working.&lt;/p&gt;
+&lt;p&gt;I settled on &lt;a class="reference external" href="http://getpelican.com"&gt;Pelican&lt;/a&gt;. So far, I'm liking it quite a bit. I had to tweak the Makefile a bit to get the &lt;tt class="docutils literal"&gt;make github&lt;/tt&gt; target to work for a personal Github page. This blog's &lt;a class="reference external" href="https://github.com/cmars/cmars.github.com/tree/pelican"&gt;pelican branch in Github&lt;/a&gt; might be helpful if you're trying to get something similar working.&lt;/p&gt;
 </summary></entry></feed>
