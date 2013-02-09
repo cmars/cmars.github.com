@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                <title>cmars blog</title>
+        <meta charset="utf-8" />
+                <link href="https://cmars.github.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="cmars blog Full Atom Feed" />
+                        <link href="https://cmars.github.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="cmars blog Full RSS Feed" />
+                                        <link href="https://cmars.github.com/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="cmars blog Categories Atom Feed" />
+                        <link href="https://cmars.github.com/feeds/misc.rss.xml" type="application/rss+xml" rel="alternate" title="cmars blog Categories RSS Feed" />
+                                </head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href=".">cmars blog <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+                                      <li><a href="./pages/hockeypuck.html">Hockeypuck</a></li>
+                          </ul></nav><!-- /#menu -->
+        <section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="hockeypuck-in-ubuntu-raring.html" rel="bookmark"
+         title="Permalink to Hockeypuck in Ubuntu Raring">Hockeypuck in Ubuntu Raring</a></h2>
+  
+  </header>
+  <footer class="post-info">
+    <abbr class="published" title="2013-02-08T00:00:00">
+      Fri 08 February 2013
+    </abbr>
+        <address class="vcard author">
+      By <a class="url fn" href="./author/casey-marshall.html">Casey Marshall</a>
+    </address>
+      </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p>My <a class="reference external" href="https://launchpad.net/hockeypuck">Hockeypuck</a> project was <a class="reference external" href="https://launchpad.net/ubuntu/raring/+source/hockeypuck">accepted into Ubuntu Raring</a> earlier this week. Thanks <a class="reference external" href="http://blog.dustinkirkland.com">Dustin</a> for sponsoring!</p>
+<p>I'd like to explain the significance of this to a wider audience in this post, to those who aren't working with crypto, <a class="reference external" href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP</a> and Linux on a regular basis. I want my work to improve your security &amp; freedom too.</p>
+<p>Hockeypuck is a <a class="reference external" href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP</a> public key server -- kind of like an open directory
+or phonebook for looking up someone's key to verify their digital signatures or encrypt e-mail messages or other files to them. For example, with <a class="reference external" href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP</a>, you
+could ask a keyserver the public key for my email address.</p>
+<p>(The name &quot;PGP&quot; was trademarked at some point, so we should really say &quot;OpenPGP&quot;, because that is the name of the open standard. And GnuPG, or &quot;GPG&quot;, is the free and open-source program that you'll probably end up using to &quot;do PGP&quot;.)</p>
+<p>A search for my key in <a class="reference external" href="https://launchpad.net/hockeypuck">Hockeypuck</a> looks like this:
+<a class="reference external" href="https://hockeypuck.gazzang.net/pks/lookup?op=vindex&amp;search=0x44A2D1DB">https://hockeypuck.gazzang.net/pks/lookup?op=vindex&amp;search=0x44A2D1DB</a>. On other keyservers, such as SKS, it looks like this: <a class="reference external" href="http://keyserver.ubuntu.com/pks/lookup?op=vindex&amp;search=0x44A2D1DB">http://keyserver.ubuntu.com/pks/lookup?op=vindex&amp;search=0x44A2D1DB</a>.</p>
+<p>Before the public key fingerprint linked above, you need to confirm that the key is actually owned by me. There are many ways to do this, but one of the simplest would be to send me a test encrypted mail, and then confirm it with me through some other means (a second factor). Asking me in-person or via phone call to confirm the contents (a good joke would work) would give you confidence that I am the owner of the key.</p>
+<p>It might be surprising to find that there is no approval process for submitting a key to a public key server like <a class="reference external" href="https://launchpad.net/hockeypuck">Hockeypuck</a> -- anyone may do it, anytime. In fact, anyone may register any name or email address they want! There is no account to create, no password to log on. The key itself contains some proof that whomever made it can decrypt messages, but that's it. Keys are authenticated by other keys vouching for their authenticity -- by digitally signing them. However, there is some certainty you can depend on. One cannot forge the fingerprint (a unique string) of a key or signatures made by a key -- that is protected by the strong encryption. Once a key is created, only the owner of the private part of that key can modify it, or sign with it.</p>
+<p>It seems dangerous and reckless that anyone can register a key, using whatever name and address. Yet at the same time, it is refreshing in this age of Facebook and other corporate curated social networks. Cryptographically-protected confidential social networking is there for those who can wield it responsibly. When communicating and collaborating online, whom else could people from all over the world really trust, but... each other?</p>
+<p>The global pool of public keys is fascinating. There are over 4GB of public keys and signatures that have been created and shared. Some of the names and addresses appear personal, others corporate, government, academic or military. There are mysterious pseudonyms, signed snippets of identifiers that aren't even email addresses. Any of them could be real or forgeries, without being introduced to their owners through some other means. Some may be active, others long abandoned. In many cases, the original key creator has lost the secret, private key that would be necessary in order to receive a confidential message with it.</p>
+<p>It is like what you might get if Wikipedia made a phone book.</p>
+<p>Besides email, OpenPGP is used in many other applications.
+The software packages in a Linux distribution such as Ubuntu or
+RedHat are certified as officially packaged by their authors or maintainers using
+these same type of signatures. When you update packages on such a Linux installation, a PGP keyserver would be queried to obtain the keys used to sign these packages. What else could a vast global, distributed volunteer development effort use to certify software packages?</p>
+<p>The significance of software such as <a class="reference external" href="https://launchpad.net/hockeypuck">Hockeypuck</a> going into
+Ubuntu is that it has been accepted into the community-curated
+collection of software known as &quot;Ubuntu&quot; -- meaning that it is
+considered relevant enough, and of sufficient quality to become a part
+of this collection. As a PGP keyserver, <a class="reference external" href="https://launchpad.net/hockeypuck">Hockeypuck</a> may one day support this community's collaboration, through the distribution of public keys. That would be an honor :)</p>
+
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>
