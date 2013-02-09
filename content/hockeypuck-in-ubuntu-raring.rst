@@ -4,9 +4,7 @@ Hockeypuck in Ubuntu Raring
 
 My Hockeypuck_ project was `accepted into Ubuntu Raring`__ earlier this week. Thanks Dustin_ for sponsoring!
 
-For those of you who aren't working with crypto, PGP_ and Linux on a regular basis, I'd like to try to explain what this means. Someday I'd like my work to improve your online freedom & security too.
-
-Hockeypuck is a PGP_ public key server -- kind of like an open directory
+Hockeypuck_ is a PGP_ public key server -- kind of like an open directory
 or phonebook for looking up someone's key to verify their digital signatures or encrypt e-mail messages or other files to them. For example, with PGP_, you
 could ask a keyserver the public key for my email address.
 
