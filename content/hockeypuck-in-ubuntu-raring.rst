@@ -1,6 +1,6 @@
 Hockeypuck in Ubuntu Raring
 ###########################
-:date: 2013-02-08
+:date: 2013-02-08 18:00
 
 My Hockeypuck_ project was `accepted into Ubuntu Raring`__ earlier this week. Thanks Dustin_ for sponsoring!
 

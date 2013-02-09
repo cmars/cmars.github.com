@@ -1,6 +1,6 @@
 first post
 ##########
-:date: 2013-02-08
+:date: 2013-02-08 11:00
 
 This is a first post made with Pelican. I wanted a blogging platform that:
 
