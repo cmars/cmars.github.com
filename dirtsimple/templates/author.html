@@ -1,7 +1,24 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
+{% block content %}
+<h2>Projects</h2>
+<nav id="projects"><ul>
+{% for title, link in PROJECTS %}
+	<li><a href="{{ link }}">{{ title }}</a></li>
+{% endfor %}
+</ul></nav>
+<h2>Contact</h2>
+<nav id="about"><ul>
+{% for title, link in CONTACT %}
+	<li><a href="{{ link }}">{{ title }}</a></li>
+{% endfor %}
+</ul></nav>
+{{ super() }}
+{% endblock %}
+
+{#
 {% block title %}{{ SITENAME }} - Articles by {{ author }}{% endblock %}
 {% block content_title %}
 <h2>Articles by {{ author }}</h2>
 {% endblock %}
-
+#}

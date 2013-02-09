@@ -20,10 +20,13 @@ FEED_DOMAIN = 'https://cmars.github.com'
 		#)
 
 # Social widget
-SOCIAL = (
-			('github', 'https://github.com/cmars'),
-			('launchpad', 'https://launchpad.net/cmars'),
-			('PGP: 44A2D1DB', 'http://keyserver.gazzang.net/pks/lookup?op=get&search=0x81279eee7ec89fb781702adaf79362da44a2d1db'),
+PROJECTS = (
+			('cmars on github', 'https://github.com/cmars'),
+			('cmars on launchpad', 'https://launchpad.net/cmars'),
+)
+
+CONTACT = (
+			('PGP Public Key: 44A2D1DB', 'http://keyserver.gazzang.net/pks/lookup?op=get&search=0x81279eee7ec89fb781702adaf79362da44a2d1db'),
 )
 
 DEFAULT_PAGINATION = 10
