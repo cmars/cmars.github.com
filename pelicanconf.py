@@ -3,23 +3,33 @@
 
 AUTHOR = u'Casey Marshall'
 SITENAME = u'cmars blog'
-SITEURL = ''
+SITEURL = 'https://cmars.github.com'
 
 TIMEZONE = 'US/Central'
 
 DEFAULT_LANG = u'en'
 
+FEED_ALL_RSS = 'feeds/all.rss.xml'
+CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
+
+FEED_DOMAIN = 'https://cmars.github.com'
+
 # Blogroll
-LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
-          ('Python.org', 'http://python.org'),
-          ('Jinja2', 'http://jinja.pocoo.org'),
-          ('You can modify those links in your config file', '#'),)
+#MENUITEMS = (('Hockeypuck', 'https://launchpad.net/hockeypuck'),
+			#('Conflux', 'https://github.com/cmars/conflux'),
+		#)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+			('github', 'https://github.com/cmars'),
+			('launchpad', 'https://launchpad.net/cmars'),
+)
 
 DEFAULT_PAGINATION = 10
 
-THEME="tuxlite_tbs"
+DISPLAY_PAGES_ON_MENU = True
+
+#THEME="basic"
+THEME="./dirtsimple"
+#THEME="tuxlite_tbs"
 #THEME="bootstrap2"
