@@ -4,7 +4,7 @@ Now with GnuPG signage
 
 When I publish my blog to Github, I create new post files, make whatever changes, and then I use a Makefile that the pelican-quickstart generated for me: ``make html serve`` to compile the site and view on localhost:8000, ``make github`` to publish on Github.
 
-This evening I added GnuPG_ signatures to all my posts. Each HTML page now has a detached signature. So, for example, to get the detached signature for this page, you'd fetch https://cmars.github.com/now-with-gnupg-signage.html.sig.
+This evening I added GnuPG_ signatures to all my posts. Each HTML page now has a detached signature. So, for example, to get the detached signature for this page, you'd fetch http://cmars.github.com/now-with-gnupg-signage.html.sig.
 
 Right now, it's not very easy to verify these signatures. Your browser doesn't know how to check them yet. You'd have to save them separately and use GnuPG_ to verify them. Save this HTML page, then save the .sig file, then do ``gpg --verify now-with-gnupg-signage.html.sig now-with-gnupg-signage.html``. I don't expect anyone to go to all this trouble under normal circumstances.
 
