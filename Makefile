@@ -46,6 +46,7 @@ html: clean $(OUTPUTDIR)/index.html
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	find $(OUTPUTDIR) -type f -exec gpg --default-key $(GPGKEY) --detach-sign {} \;
 
 clean:
 	find $(OUTPUTDIR) -mindepth 1 -delete
