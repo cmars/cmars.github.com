@@ -2,9 +2,11 @@ Improved fulltext search in Hockeypuck
 ######################################
 :date: 2013-02-11 16:30
 
-I've fixed a `full-text search issue`_ in Hockeypuck, and deployed the fix to http://keyserver.gazzang.net. Name search is tokenized and case-insensitive, so searches like `'casey marshall'`_ and `'Marshall Casey'`_ will now work.
+I've fixed a `full-text search issue`_ in Hockeypuck and deployed to http://keyserver.gazzang.net. Name search is tokenized and case-insensitive, so searches like `'casey marshall'`_ and `'Marshall Casey'`_ will now work.
 
-The fix was easy enough to make and test on a local MongoDB instance, but what about fixing the 3M+ keys on keyserver.gazzang.net? I wrote a `little MongoDB Javascript`_ that patches an existing database with comparable changes. I left it running late last night, and it was done in the morning, so I know it took less than 10 hours.
+The fix was easy enough to make and test on a local MongoDB instance, but what about the 3M+ keys on keyserver.gazzang.net? The fulltext search is implemented on MongoDB as an indexed array. Each element of this array would need to be lowercased. And, I improved the tokenization, so really, it would need to be rewritten.
+
+I made a `little MongoDB Javascript`_ patch script that modifies an existing Hockeypuck database with comparable changes, kicked it off late last night. It was done in the morning, so I know it took less than 10 hours. Not bad, Mongo.
 
 I've decided that SKS reconciliation is probably too much work to ship in February with other things I've got going on. I'm going to address smaller issues that have come up in the meantime to deliver a solid `0.9 release`_ for Raring Ringtail.
 
