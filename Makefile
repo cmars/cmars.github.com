@@ -1,6 +1,11 @@
 PELICAN=pelican
 PELICANOPTS=
 
+# Change this key to sign with your own.
+# Using gpg-agent is recommended, because the makefile
+# will sign many files with gpg during a build.
+GPGKEY=44A2D1DB
+
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
@@ -41,6 +46,7 @@ html: clean $(OUTPUTDIR)/index.html
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	find $(OUTPUTDIR) -name \*.\*ml -type f -exec gpg --default-key $(GPGKEY) --detach-sign {} \;
 
 clean:
 	find $(OUTPUTDIR) -mindepth 1 -delete
@@ -56,6 +62,7 @@ devserver:
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	find $(OUTPUTDIR) -name \*.\*ml -type f -exec gpg --default-key $(GPGKEY) --detach-sign {} \;
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
