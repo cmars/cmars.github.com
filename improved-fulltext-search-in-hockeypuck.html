@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                <title>cmars blog</title>
+        <meta charset="utf-8" />
+                <link href="https://cmars.github.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="cmars blog Full Atom Feed" />
+                        <link href="https://cmars.github.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="cmars blog Full RSS Feed" />
+                                        <link href="https://cmars.github.com/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="cmars blog Categories Atom Feed" />
+                        <link href="https://cmars.github.com/feeds/misc.rss.xml" type="application/rss+xml" rel="alternate" title="cmars blog Categories RSS Feed" />
+                                </head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href=".">cmars blog <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+                                      <li><a href="./pages/hockeypuck.html">Hockeypuck</a></li>
+                          </ul></nav><!-- /#menu -->
+        <section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="improved-fulltext-search-in-hockeypuck.html" rel="bookmark"
+         title="Permalink to Improved fulltext search in Hockeypuck">Improved fulltext search in Hockeypuck</a></h2>
+  
+  </header>
+  <footer class="post-info">
+    <abbr class="published" title="2013-02-11T16:30:00">
+      Mon 11 February 2013
+    </abbr>
+        <address class="vcard author">
+      By <a class="url fn" href="./author/casey-marshall.html">Casey Marshall</a>
+    </address>
+      </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p>I've fixed a <a class="reference external" href="https://bugs.launchpad.net/hockeypuck/+bug/1108416">full-text search issue</a> in Hockeypuck, and deployed the fix to <a class="reference external" href="http://keyserver.gazzang.net">http://keyserver.gazzang.net</a>. Name search is tokenized and case-insensitive, so searches like <a class="reference external" href="http://keyserver.gazzang.net/pks/lookup?op=index&amp;search=casey+marshall">'casey marshall'</a> and <a class="reference external" href="http://keyserver.gazzang.net/pks/lookup?op=index&amp;search=Marshall%20Casey">'Marshall Casey'</a> will now work.</p>
+<p>The fix was easy enough to make and test on a local MongoDB instance, but what about fixing the 3M+ keys on keyserver.gazzang.net? I wrote a <a class="reference external" href="https://bazaar.launchpad.net/~hockeypuck/hockeypuck/trunk/view/head:/instroot/usr/share/hockeypuck-mgo/scripts/fix-keywords.js">little MongoDB Javascript</a> that patches an existing database with comparable changes. I left it running late last night, and it was done in the morning, so I know it took less than 10 hours.</p>
+<p>I've decided that SKS reconciliation is probably too much work to ship in February with other things I've got going on. I'm going to address smaller issues that have come up in the meantime to deliver a solid <a class="reference external" href="https://launchpad.net/hockeypuck/+milestone/0.9">0.9 release</a> for Raring Ringtail.</p>
+<p>SKS reconciliation will get a nice, solid 1.0 release number. I'm thinking late March/early April at this point.</p>
+
+  </div><!-- /.entry-content -->
+</section>
+<section id="comments" class="body">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'cmars';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>. Or don't. It's fine by me, I use NoScript.</noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>
